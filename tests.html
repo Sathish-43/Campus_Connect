@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Series - Campus Placement System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <i class="bi bi-building me-2"></i>
+          <span>CampusHire</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="companies.html">Companies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="tests.html">Test Series</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="interviews.html">Interviews</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <div class="dropdown">
+              <a class="btn btn-outline-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                <i class="bi bi-person-circle me-1"></i>
+                Profile
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="student-portal.html">Student Portal</a></li>
+                <li><a class="dropdown-item" href="recruiter-portal.html">Recruiter Portal</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container py-4">
+      <!-- Page Header -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h2 class="mb-1">Test Series</h2>
+          <p class="text-muted">Practice with mock tests to prepare for placement assessments</p>
+        </div>
+        <div class="d-flex">
+          <div class="input-group me-2">
+            <input type="text" class="form-control" placeholder="Search tests...">
+            <button class="btn btn-outline-primary" type="button">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              <i class="bi bi-sort-down me-1"></i> Sort By
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Newest First</a></li>
+              <li><a class="dropdown-item" href="#">Popularity</a></li>
+              <li><a class="dropdown-item" href="#">Difficulty (Easy to Hard)</a></li>
+              <li><a class="dropdown-item" href="#">Difficulty (Hard to Easy)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Test Categories -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title mb-3">Test Categories</h5>
+              <div class="row g-2">
+                <div class="col-6 col-md-4 col-lg-2">
+                  <div class="card category-card border-0 shadow-sm text-center h-100">
+                    <div class="card-body p-3">
+                      <div class="category-icon mx-auto mb-3 bg-primary-subtle p-3 rounded-circle">
+                        <i class="bi bi-code-slash text-primary fs-4"></i>
+                      </div>
+                      <h6 class="card-title">Technical</h6>
+                      <p class="small text-muted mb-0">25 tests</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                  <div class="card category-card border-0 shadow-sm text-center h-100">
+                    <div class="card-body p-3">
+                      <div class="category-icon mx-auto mb-3 bg-success-subtle p-3 rounded-circle">
+                        <i class="bi bi-puzzle text-success fs-4"></i>
+                      </div>
+                      <h6 class="card-title">Aptitude</h6>
+                      <p class="small text-muted mb-0">18 tests</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                  <div class="card category-card border-0 shadow-sm text-center h-100">
+                    <div class="card-body p-3">
+                      <div class="category-icon mx-auto mb-3 bg-warning-subtle p-3 rounded-circle">
+                        <i class="bi bi-graph-up text-warning fs-4"></i>
+                      </div>
+                      <h6 class="card-title">Reasoning</h6>
+                      <p class="small text-muted mb-0">15 tests</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                  <div class="card category-card border-0 shadow-sm text-center h-100">
+                    <div class="card-body p-3">
+                      <div class="category-icon mx-auto mb-3 bg-danger-subtle p-3 rounded-circle">
+                        <i class="bi bi-chat-text text-danger fs-4"></i>
+                      </div>
+                      <h6 class="card-title">Verbal</h6>
+                      <p class="small text-muted mb-0">12 tests</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                  <div class="card category-card border-0 shadow-sm text-center h-100">
+                    <div class="card-body p-3">
+                      <div class="category-icon mx-auto mb-3 bg-info-subtle p-3 rounded-circle">
+                        <i class="bi bi-briefcase text-info fs-4"></i>
+                      </div>
+                      <h6 class="card-title">Company</h6>
+                      <p class="small text-muted mb-0">30 tests</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                  <div class="card category-card border-0 shadow-sm text-center h-100">
+                    <div class="card-body p-3">
+                      <div class="category-icon mx-auto mb-3 bg-secondary-subtle p-3 rounded-circle">
+                        <i class="bi bi-journal-text text-secondary fs-4"></i>
+                      </div>
+                      <h6 class="card-title">All Tests</h6>
+                      <p class="small text-muted mb-0">100+ tests</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Tests -->
+      <section class="mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4>Featured Tests</h4>
+          <a href="#" class="btn btn-sm btn-link">View All</a>
+        </div>
+        <div class="row">
+          <!-- Test Card 1 -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card test-card border-0 shadow-sm h-100">
+              <div class="card-header bg-primary text-white py-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="card-title mb-0">Microsoft Technical</h5>
+                  <span class="badge bg-light text-primary">Featured</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="test-icon me-3 p-2 bg-light rounded">
+                    <i class="bi bi-microsoft text-primary fs-4"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0">Microsoft Assessment</h6>
+                    <p class="text-muted small mb-0">SDE & Product Management</p>
+                  </div>
+                </div>
+                
+                <div class="test-details mb-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Duration:</span>
+                    <span>90 Minutes</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Questions:</span>
+                    <span>50 MCQs + 2 Coding</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Difficulty:</span>
+                    <div>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star text-warning"></i>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span class="text-muted small">Attempts:</span>
+                    <span>2,456 students</span>
+                  </div>
+                </div>
+
+                <div class="progress mb-2" style="height: 6px;">
+                  <div class="progress-bar bg-success" role="progressbar" style="width: 80%"></div>
+                </div>
+                <p class="small text-muted mb-0">Recommended for Microsoft preparation</p>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0">
+                <a href="#" class="btn btn-primary w-100">Start Test</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Test Card 2 -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card test-card border-0 shadow-sm h-100">
+              <div class="card-header bg-danger text-white py-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="card-title mb-0">Google Aptitude</h5>
+                  <span class="badge bg-light text-danger">New</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="test-icon me-3 p-2 bg-light rounded">
+                    <i class="bi bi-google text-danger fs-4"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0">Google Assessment</h6>
+                    <p class="text-muted small mb-0">Data Science & ML Engineer</p>
+                  </div>
+                </div>
+                
+                <div class="test-details mb-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Duration:</span>
+                    <span>60 Minutes</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Questions:</span>
+                    <span>40 MCQs</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Difficulty:</span>
+                    <div>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-half text-warning"></i>
+                      <i class="bi bi-star text-warning"></i>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span class="text-muted small">Attempts:</span>
+                    <span>1,834 students</span>
+                  </div>
+                </div>
+
+                <div class="progress mb-2" style="height: 6px;">
+                  <div class="progress-bar bg-success" role="progressbar" style="width: 75%"></div>
+                </div>
+                <p class="small text-muted mb-0">Recommended for Google preparation</p>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0">
+                <a href="#" class="btn btn-primary w-100">Start Test</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Test Card 3 -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card test-card border-0 shadow-sm h-100">
+              <div class="card-header bg-warning text-dark py-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="card-title mb-0">Amazon Coding</h5>
+                  <span class="badge bg-light text-warning">Popular</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="test-icon me-3 p-2 bg-light rounded">
+                    <i class="bi bi-amazon text-warning fs-4"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0">Amazon Assessment</h6>
+                    <p class="text-muted small mb-0">SDE & Backend Developer</p>
+                  </div>
+                </div>
+                
+                <div class="test-details mb-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Duration:</span>
+                    <span>120 Minutes</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Questions:</span>
+                    <span>20 MCQs + 3 Coding</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Difficulty:</span>
+                    <div>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-half text-warning"></i>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span class="text-muted small">Attempts:</span>
+                    <span>3,128 students</span>
+                  </div>
+                </div>
+
+                <div class="progress mb-2" style="height: 6px;">
+                  <div class="progress-bar bg-success" role="progressbar" style="width: 85%"></div>
+                </div>
+                <p class="small text-muted mb-0">Recommended for Amazon preparation</p>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0">
+                <a href="#" class="btn btn-primary w-100">Start Test</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Tests -->
+      <section class="mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4>Recent Tests</h4>
+          <a href="#" class="btn btn-sm btn-link">View All</a>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-hover align-middle">
+            <thead class="table-light">
+              <tr>
+                <th scope="col">Test Name</th>
+                <th scope="col">Category</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Difficulty</th>
+                <th scope="col">Attempts</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <div class="test-icon me-3 p-2 bg-light rounded">
+                      <i class="bi bi-code-square text-primary fs-5"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-0">Data Structures & Algorithms</h6>
+                      <p class="text-muted small mb-0">General Technical</p>
+                    </div>
+                  </div>
+                </td>
+                <td>Technical</td>
+                <td>90 min</td>
+                <td>
+                  <div>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-warning"></i>
+                    <i class="bi bi-star text-warning"></i>
+                  </div>
+                </td>
+                <td>5,245</td>
+                <td>
+                  <a href="#" class="btn btn-sm btn-primary">Start</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <div class="test-icon me-3 p-2 bg-light rounded">
+                      <i class="bi bi-calculator text-success fs-5"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-0">Quantitative Aptitude</h6>
+                      <p class="text-muted small mb-0">General Aptitude</p>
+                    </div>
+                  </div>
+                </td>
+                <td>Aptitude</td>
+                <td>60 min</td>
+                <td>
+                  <div>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                    <i class="bi bi-star text-warning"></i>
+                    <i class="bi bi-star text-warning"></i>
+                  </div>
+                </td>
+                <td>4,789</td>
+                <td>
+                  <a href="#" class="btn btn-sm btn-primary">Start</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <div class="test-icon me-3 p-2 bg-light rounded">
+                      <i class="bi bi-braces text-warning fs-5"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-0">Java Programming</h6>
+                      <p class="text-muted small mb-0">Technical</p>
+                    </div>
+                  </div>
+                </td>
+                <td>Technical</td>
+                <td>75 min</td>
+                <td>
+                  <div>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-warning"></i>
+                  </div>
+                </td>
+                <td>3,912</td>
+                <td>
+                  <a href="#" class="btn btn-sm btn-primary">Start</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <div class="test-icon me-3 p-2 bg-light rounded">
+                      <i class="bi bi-puzzle text-danger fs-5"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-0">Logical Reasoning</h6>
+                      <p class="text-muted small mb-0">General Reasoning</p>
+                    </div>
+                  </div>
+                </td>
+                <td>Reasoning</td>
+                <td>45 min</td>
+                <td>
+                  <div>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-warning"></i>
+                    <i class="bi bi-star text-warning"></i>
+                  </div>
+                </td>
+                <td>3,567</td>
+                <td>
+                  <a href="#" class="btn btn-sm btn-primary">Start</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <div class="test-icon me-3 p-2 bg-light rounded">
+                      <i class="bi bi-chat-square-text text-info fs-5"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-0">Verbal Ability</h6>
+                      <p class="text-muted small mb-0">General English</p>
+                    </div>
+                  </div>
+                </td>
+                <td>Verbal</td>
+                <td>40 min</td>
+                <td>
+                  <div>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-warning"></i>
+                    <i class="bi bi-star text-warning"></i>
+                    <i class="bi bi-star text-warning"></i>
+                  </div>
+                </td>
+                <td>2,941</td>
+                <td>
+                  <a href="#" class="btn btn-sm btn-primary">Start</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Company-Specific Tests -->
+      <section class="mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4>Company-Specific Tests</h4>
+          <a href="#" class="btn btn-sm btn-link">View All</a>
+        </div>
+        <div class="row">
+          <!-- Company Test Card 1 -->
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card company-test-card border-0 shadow-sm h-100">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="test-icon me-3 p-2 bg-light rounded">
+                    <i class="bi bi-microsoft text-primary fs-4"></i>
+                  </div>
+                  <h5 class="card-title mb-0">Microsoft</h5>
+                </div>
+                <p class="card-text small mb-3">Full mock interview test pattern following Microsoft's actual assessment format.</p>
+                <div class="test-stats d-flex justify-content-between mb-3">
+                  <div class="text-center">
+                    <h6 class="mb-0">12</h6>
+                    <p class="small text-muted mb-0">Tests</p>
+                  </div>
+                  <div class="text-center">
+                    <h6 class="mb-0">90 min</h6>
+                    <p class="small text-muted mb-0">Avg. Duration</p>
+                  </div>
+                  <div class="text-center">
+                    <h6 class="mb-0">4.2/5</h6>
+                    <p class="small text-muted mb-0">Difficulty</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a href="#" class="btn btn-outline-primary w-100">View Tests</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Company Test Card 2 -->
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card company-test-card border-0 shadow-sm h-100">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="test-icon me-3 p-2 bg-light rounded">
+                    <i class="bi bi-amazon text-warning fs-4"></i>
+                  </div>
+                  <h5 class="card-title mb-0">Amazon</h5>
+                </div>
+                <p class="card-text small mb-3">Comprehensive test series covering Amazon's assessment patterns for various roles.</p>
+                <div class="test-stats d-flex justify-content-between mb-3">
+                  <div class="text-center">
+                    <h6 class="mb-0">15</h6>
+                    <p class="small text-muted mb-0">Tests</p>
+                  </div>
+                  <div class="text-center">
+                    <h6 class="mb-0">120 min</h6>
+                    <p class="small text-muted mb-0">Avg. Duration</p>
+                  </div>
+                  <div class="text-center">
+                    <h6 class="mb-0">4.5/5</h6>
+                    <p class="small text-muted mb-0">Difficulty</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a href="#" class="btn btn-outline-primary w-100">View Tests</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Company Test Card 3 -->
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card company-test-card border-0 shadow-sm h-100">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="test-icon me-3 p-2 bg-light rounded">
+                    <i class="bi bi-google text-danger fs-4"></i>
+                  </div>
+                  <h5 class="card-title mb-0">Google</h5>
+                </div>
+                <p class="card-text small mb-3">Practice tests designed based on Google's recruitment process and standards.</p>
+                <div class="test-stats d-flex justify-content-between mb-3">
+                  <div class="text-center">
+                    <h6 class="mb-0">10</h6>
+                    <p class="small text-muted mb-0">Tests</p>
+                  </div>
+                  <div class="text-center">
+                    <h6 class="mb-0">90 min</h6>
+                    <p class="small text-muted mb-0">Avg. Duration</p>
+                  </div>
+                  <div class="text-center">
+                    <h6 class="mb-0">4.8/5</h6>
+                    <p class="small text-muted mb-0">Difficulty</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a href="#" class="btn btn-outline-primary w-100">View Tests</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Company Test Card 4 -->
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card company-test-card border-0 shadow-sm h-100">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="test-icon me-3 p-2 bg-light rounded">
+                    <i class="bi bi-apple text-dark fs-4"></i>
+                  </div>
+                  <h5 class="card-title mb-0">Apple</h5>
+                </div>
+                <p class="card-text small mb-3">Specialized test series that mirrors Apple's interview process for various roles.</p>
+                <div class="test-stats d-flex justify-content-between mb-3">
+                  <div class="text-center">
+                    <h6 class="mb-0">8</h6>
+                    <p class="small text-muted mb-0">Tests</p>
+                  </div>
+                  <div class="text-center">
+                    <h6 class="mb-0">105 min</h6>
+                    <p class="small text-muted mb-0">Avg. Duration</p>
+                  </div>
+                  <div class="text-center">
+                    <h6 class="mb-0">4.3/5</h6>
+                    <p class="small text-muted mb-0">Difficulty</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a href="#" class="btn btn-outline-primary w-100">View Tests</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Test Performance -->
+      <section class="mb-4">
+        <div class="card border-0 shadow-sm">
+          <div class="card-header bg-white border-0">
+            <h5 class="card-title mb-0">Your Test Performance</h5>
+          </div>
+          <div class="card-body">
+            <div class="alert alert-info d-flex align-items-center" role="alert">
+              <i class="bi bi-info-circle me-2"></i>
+              <div>Login to view your test performance and analytics</div>
+            </div>
+            <div class="text-center py-4">
+              <img src="https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Test analytics" class="img-fluid mb-3" style="max-height: 200px;">
+              <h5>Track Your Progress</h5>
+              <p class="text-muted">Sign in to view your test history and performance analytics</p>
+              <a href="student-portal.html" class="btn btn-primary">Sign In</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <h5 class="mb-3">CampusHire</h5>
+            <p class="text-muted small">Connecting students with top companies for recruitment opportunities.</p>
+          </div>
+          <div class="col-md-2 mb-3 mb-md-0">
+            <h6 class="mb-3">Quick Links</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+              <li class="mb-2"><a href="companies.html" class="text-decoration-none text-muted">Companies</a></li>
+              <li class="mb-2"><a href="tests.html" class="text-decoration-none text-muted">Test Series</a></li>
+              <li><a href="interviews.html" class="text-decoration-none text-muted">Interviews</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-3 mb-md-0">
+            <h6 class="mb-3">Student Resources</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Resume Templates</a></li>
+              <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Interview Tips</a></li>
+              <li><a href="#" class="text-decoration-none text-muted">Placement Preparation</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6 class="mb-3">Contact Us</h6>
+            <p class="text-muted small mb-2"><i class="bi bi-envelope me-2"></i> support@campushire.com</p>
+            <p class="text-muted small mb-2"><i class="bi bi-telephone me-2"></i> +1 (123) 456-7890</p>
+            <div class="social-icons mt-3">
+              <a href="#" class="text-decoration-none text-muted me-3"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="text-decoration-none text-muted me-3"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="text-decoration-none text-muted me-3"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="text-decoration-none text-muted"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr class="mt-4 mb-3 border-secondary">
+        <div class="text-center text-muted">
+          <small>&copy; 2023 CampusHire. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,240 @@
+/* CampusHire - Placement Management System Styles */
+
+:root {
+  --primary-color: #0d6efd;
+  --primary-dark: #0a58ca;
+  --primary-light: #cfe2ff;
+  --secondary-color: #6c757d;
+  --success-color: #198754;
+  --info-color: #0dcaf0;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+}
+
+body {
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* Navbar Styles */
+.navbar-brand {
+  font-weight: 600;
+}
+
+/* Card hover effects */
+.company-card:hover,
+.test-card:hover,
+.venue-card:hover,
+.interview-card:hover,
+.category-card:hover,
+.company-test-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  transition: all 0.3s ease;
+}
+
+/* Stats and quick access icons */
+.stat-icon,
+.quick-access-icon,
+.category-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.quick-access-icon:hover,
+.category-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Company card styles */
+.company-card {
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.company-logo {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Test card styles */
+.test-card .card-header {
+  transition: all 0.3s ease;
+}
+
+/* Calendar styles */
+.calendar-event {
+  transition: all 0.2s ease;
+}
+
+.calendar-event:hover {
+  transform: scale(1.02);
+}
+
+/* Date badges in upcoming events */
+.date-badge {
+  min-width: 50px;
+  text-align: center;
+}
+
+.date-badge .month {
+  font-size: 0.8rem;
+  display: block;
+}
+
+.date-badge .day {
+  min-width: 40px;
+}
+
+/* Student profile styles */
+.profile-picture {
+  transition: all 0.3s ease;
+}
+
+.profile-picture:hover {
+  transform: scale(1.05);
+}
+
+.student-badges .badge {
+  transition: all 0.2s ease;
+}
+
+.student-badges .badge:hover {
+  transform: scale(1.1);
+}
+
+/* Education and experience cards */
+.education-card,
+.experience-card,
+.project-card {
+  transition: all 0.3s ease;
+}
+
+.education-card:hover,
+.experience-card:hover,
+.project-card:hover {
+  border-color: var(--primary-color) !important;
+}
+
+/* Progress bars */
+.progress {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Form controls */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Button hover effects */
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Subtle animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hero-section {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Footer social icons */
+.social-icons a {
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+  opacity: 0.8;
+}
+
+/* Custom backgrounds */
+.bg-primary-subtle {
+  background-color: rgba(13, 110, 253, 0.1);
+}
+
+.bg-success-subtle {
+  background-color: rgba(25, 135, 84, 0.1);
+}
+
+.bg-info-subtle {
+  background-color: rgba(13, 202, 240, 0.1);
+}
+
+.bg-warning-subtle {
+  background-color: rgba(255, 193, 7, 0.1);
+}
+
+.bg-danger-subtle {
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+.bg-secondary-subtle {
+  background-color: rgba(108, 117, 125, 0.1);
+}
+
+/* Calendar Grid */
+.calendar-time, 
+.calendar-slot {
+  min-height: 100px;
+}
+
+.calendar-event {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .calendar-header,
+  .calendar-row {
+    display: none !important;
+  }
+  
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+  
+  .stat-icon,
+  .quick-access-icon,
+  .category-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+  }
+}
+
+/* Card transitions */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

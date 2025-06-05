@@ -1,0 +1,895 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recruiter Portal - Campus Placement System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <i class="bi bi-building me-2"></i>
+          <span>CampusHire</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="companies.html">Companies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tests.html">Test Series</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="interviews.html">Interviews</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <div class="dropdown">
+              <a class="btn btn-outline-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                <i class="bi bi-person-circle me-1"></i>
+                Recruiter
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="recruiter-portal.html">Dashboard</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container py-4">
+      <!-- Page Header with Company Profile Summary -->
+      <div class="card mb-4 border-0 shadow-sm bg-primary bg-gradient text-white">
+        <div class="card-body p-4">
+          <div class="row align-items-center">
+            <div class="col-md-2 col-lg-1 text-center text-md-start mb-3 mb-md-0">
+              <div class="company-logo bg-white p-3 rounded d-inline-flex">
+                <i class="bi bi-microsoft text-primary fs-1"></i>
+              </div>
+            </div>
+            <div class="col-md-7 col-lg-8 text-center text-md-start mb-3 mb-md-0">
+              <h2 class="mb-1">Microsoft Recruiter Portal</h2>
+              <p class="mb-0">Welcome back, John Smith! Manage your recruitment process and connect with talented students.</p>
+            </div>
+            <div class="col-md-3 col-lg-3 text-center text-md-end">
+              <button class="btn btn-light me-2">
+                <i class="bi bi-pencil me-1"></i> Edit Profile
+              </button>
+              <button class="btn btn-outline-light">
+                <i class="bi bi-bell me-1"></i> 3
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Stats Cards -->
+      <div class="row mb-4">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <div class="stat-icon bg-primary-subtle p-3 rounded me-3">
+                  <i class="bi bi-briefcase text-primary fs-4"></i>
+                </div>
+                <div>
+                  <h6 class="card-title text-muted mb-0">Active Jobs</h6>
+                  <h2 class="my-1">5</h2>
+                  <p class="text-success small mb-0"><i class="bi bi-arrow-up"></i> 2 new this week</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <div class="stat-icon bg-success-subtle p-3 rounded me-3">
+                  <i class="bi bi-person-check text-success fs-4"></i>
+                </div>
+                <div>
+                  <h6 class="card-title text-muted mb-0">Applications</h6>
+                  <h2 class="my-1">124</h2>
+                  <p class="text-success small mb-0"><i class="bi bi-arrow-up"></i> 23 new this week</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <div class="stat-icon bg-warning-subtle p-3 rounded me-3">
+                  <i class="bi bi-calendar-check text-warning fs-4"></i>
+                </div>
+                <div>
+                  <h6 class="card-title text-muted mb-0">Interviews</h6>
+                  <h2 class="my-1">28</h2>
+                  <p class="text-success small mb-0"><i class="bi bi-arrow-up"></i> 8 scheduled</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <div class="stat-icon bg-info-subtle p-3 rounded me-3">
+                  <i class="bi bi-people text-info fs-4"></i>
+                </div>
+                <div>
+                  <h6 class="card-title text-muted mb-0">Offers Made</h6>
+                  <h2 class="my-1">12</h2>
+                  <p class="text-success small mb-0"><i class="bi bi-arrow-up"></i> 3 accepted</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Active Job Listings -->
+      <section class="mb-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4>Active Job Listings</h4>
+          <button class="btn btn-primary">
+            <i class="bi bi-plus-lg me-1"></i> Post New Job
+          </button>
+        </div>
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-0">
+            <div class="table-responsive">
+              <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                  <tr>
+                    <th scope="col">Position</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Applications</th>
+                    <th scope="col">Posted On</th>
+                    <th scope="col">Deadline</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-code-square text-primary me-2 fs-5"></i>
+                        <div>
+                          <h6 class="mb-0">Software Development Engineer</h6>
+                          <p class="text-muted small mb-0">Full-time</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Engineering</td>
+                    <td>45</td>
+                    <td>Sep 25, 2023</td>
+                    <td>Oct 25, 2023</td>
+                    <td><span class="badge bg-success">Active</span></td>
+                    <td>
+                      <div class="dropdown">
+                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                          Action
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-eye me-2"></i> View Details</a></li>
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-pencil me-2"></i> Edit</a></li>
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-people me-2"></i> View Applicants</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i> Delete</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-kanban text-success me-2 fs-5"></i>
+                        <div>
+                          <h6 class="mb-0">Product Manager</h6>
+                          <p class="text-muted small mb-0">Full-time</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Product Management</td>
+                    <td>38</td>
+                    <td>Oct 01, 2023</td>
+                    <td>Oct 30, 2023</td>
+                    <td><span class="badge bg-success">Active</span></td>
+                    <td>
+                      <div class="dropdown">
+                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                          Action
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-eye me-2"></i> View Details</a></li>
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-pencil me-2"></i> Edit</a></li>
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-people me-2"></i> View Applicants</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i> Delete</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-graph-up text-info me-2 fs-5"></i>
+                        <div>
+                          <h6 class="mb-0">Data Scientist</h6>
+                          <p class="text-muted small mb-0">Full-time</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>AI Research</td>
+                    <td>22</td>
+                    <td>Oct 05, 2023</td>
+                    <td>Nov 05, 2023</td>
+                    <td><span class="badge bg-success">Active</span></td>
+                    <td>
+                      <div class="dropdown">
+                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                          Action
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-eye me-2"></i> View Details</a></li>
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-pencil me-2"></i> Edit</a></li>
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-people me-2"></i> View Applicants</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i> Delete</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-cloud-check text-warning me-2 fs-5"></i>
+                        <div>
+                          <h6 class="mb-0">Cloud Solutions Architect</h6>
+                          <p class="text-muted small mb-0">Full-time</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Cloud Services</td>
+                    <td>19</td>
+                    <td>Oct 08, 2023</td>
+                    <td>Nov 08, 2023</td>
+                    <td><span class="badge bg-success">Active</span></td>
+                    <td>
+                      <div class="dropdown">
+                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                          Action
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-eye me-2"></i> View Details</a></li>
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-pencil me-2"></i> Edit</a></li>
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-people me-2"></i> View Applicants</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i> Delete</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-phone text-danger me-2 fs-5"></i>
+                        <div>
+                          <h6 class="mb-0">UI/UX Designer</h6>
+                          <p class="text-muted small mb-0">Full-time</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Design</td>
+                    <td>31</td>
+                    <td>Oct 10, 2023</td>
+                    <td>Nov 10, 2023</td>
+                    <td><span class="badge bg-success">Active</span></td>
+                    <td>
+                      <div class="dropdown">
+                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                          Action
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-eye me-2"></i> View Details</a></li>
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-pencil me-2"></i> Edit</a></li>
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-people me-2"></i> View Applicants</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i> Delete</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Applicants -->
+      <section class="mb-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4>Recent Applicants</h4>
+          <a href="#" class="btn btn-sm btn-link">View All</a>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table align-middle mb-0">
+                    <thead class="table-light">
+                      <tr>
+                        <th scope="col">Candidate</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Skills Match</th>
+                        <th scope="col">Education</th>
+                        <th scope="col">Applied On</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div class="avatar-circle bg-primary text-white rounded-circle me-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                              <span>AM</span>
+                            </div>
+                            <div>
+                              <h6 class="mb-0">Alex Morgan</h6>
+                              <p class="text-muted small mb-0">alexm@email.com</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>Software Development Engineer</td>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div class="progress flex-grow-1 me-2" style="height: 6px;">
+                              <div class="progress-bar bg-success" role="progressbar" style="width: 90%"></div>
+                            </div>
+                            <span>90%</span>
+                          </div>
+                        </td>
+                        <td>MIT, Computer Science</td>
+                        <td>Oct 12, 2023</td>
+                        <td><span class="badge bg-warning">Review</span></td>
+                        <td>
+                          <div class="dropdown">
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                              Action
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                              <li><a class="dropdown-item" href="#"><i class="bi bi-file-person me-2"></i> View Profile</a></li>
+                              <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-pdf me-2"></i> View Resume</a></li>
+                              <li><a class="dropdown-item" href="#"><i class="bi bi-calendar-plus me-2"></i> Schedule Interview</a></li>
+                              <li><a class="dropdown-item text-success" href="#"><i class="bi bi-check-circle me-2"></i> Shortlist</a></li>
+                              <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-x-circle me-2"></i> Reject</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div class="avatar-circle bg-info text-white rounded-circle me-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                              <span>SP</span>
+                            </div>
+                            <div>
+                              <h6 class="mb-0">Sarah Parker</h6>
+                              <p class="text-muted small mb-0">sarahp@email.com</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>UI/UX Designer</td>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div class="progress flex-grow-1 me-2" style="height: 6px;">
+                              <div class="progress-bar bg-success" role="progressbar" style="width: 85%"></div>
+                            </div>
+                            <span>85%</span>
+                          </div>
+                        </td>
+                        <td>RISD, Graphic Design</td>
+                        <td>Oct 14, 2023</td>
+                        <td><span class="badge bg-info">Screening</span></td>
+                        <td>
+                          <div class="dropdown">
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                              Action
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                              <li><a class="dropdown-item" href="#"><i class="bi bi-file-person me-2"></i> View Profile</a></li>
+                              <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-pdf me-2"></i> View Resume</a></li>
+                              <li><a class="dropdown-item" href="#"><i class="bi bi-calendar-plus me-2"></i> Schedule Interview</a></li>
+                              <li><a class="dropdown-item text-success" href="#"><i class="bi bi-check-circle me-2"></i> Shortlist</a></li>
+                              <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-x-circle me-2"></i> Reject</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div class="avatar-circle bg-warning text-dark rounded-circle me-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                              <span>RJ</span>
+                            </div>
+                            <div>
+                              <h6 class="mb-0">Ryan Johnson</h6>
+                              <p class="text-muted small mb-0">ryanj@email.com</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>Data Scientist</td>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div class="progress flex-grow-1 me-2" style="height: 6px;">
+                              <div class="progress-bar bg-success" role="progressbar" style="width: 95%"></div>
+                            </div>
+                            <span>95%</span>
+                          </div>
+                        </td>
+                        <td>Stanford, Data Science</td>
+                        <td>Oct 13, 2023</td>
+                        <td><span class="badge bg-success">Shortlisted</span></td>
+                        <td>
+                          <div class="dropdown">
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                              Action
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                              <li><a class="dropdown-item" href="#"><i class="bi bi-file-person me-2"></i> View Profile</a></li>
+                              <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-pdf me-2"></i> View Resume</a></li>
+                              <li><a class="dropdown-item" href="#"><i class="bi bi-calendar-plus me-2"></i> Schedule Interview</a></li>
+                              <li><a class="dropdown-item text-primary" href="#"><i class="bi bi-envelope me-2"></i> Send Offer</a></li>
+                              <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-x-circle me-2"></i> Reject</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div class="avatar-circle bg-danger text-white rounded-circle me-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                              <span>EW</span>
+                            </div>
+                            <div>
+                              <h6 class="mb-0">Emma Wilson</h6>
+                              <p class="text-muted small mb-0">emmaw@email.com</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>Product Manager</td>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div class="progress flex-grow-1 me-2" style="height: 6px;">
+                              <div class="progress-bar bg-warning" role="progressbar" style="width: 75%"></div>
+                            </div>
+                            <span>75%</span>
+                          </div>
+                        </td>
+                        <td>Harvard, MBA</td>
+                        <td>Oct 15, 2023</td>
+                        <td><span class="badge bg-warning">Review</span></td>
+                        <td>
+                          <div class="dropdown">
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                              Action
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                              <li><a class="dropdown-item" href="#"><i class="bi bi-file-person me-2"></i> View Profile</a></li>
+                              <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-pdf me-2"></i> View Resume</a></li>
+                              <li><a class="dropdown-item" href="#"><i class="bi bi-calendar-plus me-2"></i> Schedule Interview</a></li>
+                              <li><a class="dropdown-item text-success" href="#"><i class="bi bi-check-circle me-2"></i> Shortlist</a></li>
+                              <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-x-circle me-2"></i> Reject</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div class="avatar-circle bg-success text-white rounded-circle me-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                              <span>JL</span>
+                            </div>
+                            <div>
+                              <h6 class="mb-0">James Lee</h6>
+                              <p class="text-muted small mb-0">jamesl@email.com</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>Cloud Solutions Architect</td>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div class="progress flex-grow-1 me-2" style="height: 6px;">
+                              <div class="progress-bar bg-warning" role="progressbar" style="width: 80%"></div>
+                            </div>
+                            <span>80%</span>
+                          </div>
+                        </td>
+                        <td>UC Berkeley, Computer Engineering</td>
+                        <td>Oct 11, 2023</td>
+                        <td><span class="badge bg-danger">Rejected</span></td>
+                        <td>
+                          <div class="dropdown">
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                              Action
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                              <li><a class="dropdown-item" href="#"><i class="bi bi-file-person me-2"></i> View Profile</a></li>
+                              <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-pdf me-2"></i> View Resume</a></li>
+                              <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-counterclockwise me-2"></i> Reconsider</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="card-footer bg-white py-2">
+                <nav aria-label="Applicants pagination" class="my-1">
+                  <ul class="pagination pagination-sm justify-content-center mb-0">
+                    <li class="page-item disabled">
+                      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">Next</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Upcoming Interviews -->
+      <section class="mb-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4>Upcoming Interviews</h4>
+          <button class="btn btn-primary">
+            <i class="bi bi-calendar-plus me-1"></i> Schedule Interview
+          </button>
+        </div>
+        <div class="row">
+          <!-- Interview Card 1 -->
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card interview-card border-0 shadow-sm h-100">
+              <div class="card-header bg-primary text-white d-flex align-items-center justify-content-between py-3">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-calendar2-week me-2"></i>
+                  <span>Oct 16, 2023</span>
+                </div>
+                <span class="badge bg-light text-primary">Technical</span>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="avatar-circle bg-primary-subtle text-primary rounded-circle me-2 d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;">
+                    <span>AM</span>
+                  </div>
+                  <div>
+                    <h6 class="mb-0">Alex Morgan</h6>
+                    <p class="text-muted small mb-0">SDE Position</p>
+                  </div>
+                </div>
+                <div class="interview-details">
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-clock text-primary me-2"></i>
+                    <span class="small">9:00 AM - 10:30 AM</span>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-geo-alt text-primary me-2"></i>
+                    <span class="small">Tech Building, Room 303</span>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-people text-primary me-2"></i>
+                    <span class="small">Panel: John S, Maria L</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0 d-flex">
+                <button class="btn btn-sm btn-outline-secondary w-50 me-1">Reschedule</button>
+                <button class="btn btn-sm btn-primary w-50">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interview Card 2 -->
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card interview-card border-0 shadow-sm h-100">
+              <div class="card-header bg-warning text-dark d-flex align-items-center justify-content-between py-3">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-calendar2-week me-2"></i>
+                  <span>Oct 16, 2023</span>
+                </div>
+                <span class="badge bg-light text-warning">HR</span>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="avatar-circle bg-warning-subtle text-warning rounded-circle me-2 d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;">
+                    <span>RJ</span>
+                  </div>
+                  <div>
+                    <h6 class="mb-0">Ryan Johnson</h6>
+                    <p class="text-muted small mb-0">Data Scientist Position</p>
+                  </div>
+                </div>
+                <div class="interview-details">
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-clock text-primary me-2"></i>
+                    <span class="small">2:00 PM - 3:00 PM</span>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-geo-alt text-primary me-2"></i>
+                    <span class="small">HR Building, Room 105</span>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-people text-primary me-2"></i>
+                    <span class="small">Panel: Lisa M, David K</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0 d-flex">
+                <button class="btn btn-sm btn-outline-secondary w-50 me-1">Reschedule</button>
+                <button class="btn btn-sm btn-primary w-50">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interview Card 3 -->
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card interview-card border-0 shadow-sm h-100">
+              <div class="card-header bg-success text-white d-flex align-items-center justify-content-between py-3">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-calendar2-week me-2"></i>
+                  <span>Oct 18, 2023</span>
+                </div>
+                <span class="badge bg-light text-success">Final</span>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="avatar-circle bg-success-subtle text-success rounded-circle me-2 d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;">
+                    <span>SP</span>
+                  </div>
+                  <div>
+                    <h6 class="mb-0">Sarah Parker</h6>
+                    <p class="text-muted small mb-0">UI/UX Designer Position</p>
+                  </div>
+                </div>
+                <div class="interview-details">
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-clock text-primary me-2"></i>
+                    <span class="small">10:00 AM - 11:30 AM</span>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-geo-alt text-primary me-2"></i>
+                    <span class="small">Design Center, Room 202</span>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-people text-primary me-2"></i>
+                    <span class="small">Panel: Mike T, Ana P</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0 d-flex">
+                <button class="btn btn-sm btn-outline-secondary w-50 me-1">Reschedule</button>
+                <button class="btn btn-sm btn-primary w-50">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interview Card 4 -->
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card interview-card border-0 shadow-sm h-100">
+              <div class="card-header bg-danger text-white d-flex align-items-center justify-content-between py-3">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-calendar2-week me-2"></i>
+                  <span>Oct 19, 2023</span>
+                </div>
+                <span class="badge bg-light text-danger">Coding</span>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="avatar-circle bg-danger-subtle text-danger rounded-circle me-2 d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;">
+                    <span>EW</span>
+                  </div>
+                  <div>
+                    <h6 class="mb-0">Emma Wilson</h6>
+                    <p class="text-muted small mb-0">Product Manager Position</p>
+                  </div>
+                </div>
+                <div class="interview-details">
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-clock text-primary me-2"></i>
+                    <span class="small">1:00 PM - 3:00 PM</span>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-geo-alt text-primary me-2"></i>
+                    <span class="small">Tech Building, Room 405</span>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-people text-primary me-2"></i>
+                    <span class="small">Panel: Sarah J, Robert M</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0 d-flex">
+                <button class="btn btn-sm btn-outline-secondary w-50 me-1">Reschedule</button>
+                <button class="btn btn-sm btn-primary w-50">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Post New Job Form -->
+      <section class="mb-4">
+        <div class="card border-0 shadow-sm">
+          <div class="card-header bg-white py-3">
+            <h5 class="card-title mb-0">Post a New Job</h5>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="row mb-3">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label for="jobTitle" class="form-label">Job Title</label>
+                  <input type="text" class="form-control" id="jobTitle" placeholder="e.g., Software Engineer, Product Manager">
+                </div>
+                <div class="col-md-6">
+                  <label for="department" class="form-label">Department</label>
+                  <select class="form-select" id="department">
+                    <option selected disabled>Select Department</option>
+                    <option>Engineering</option>
+                    <option>Product Management</option>
+                    <option>Design</option>
+                    <option>Marketing</option>
+                    <option>AI Research</option>
+                    <option>Cloud Services</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="row mb-3">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label for="jobType" class="form-label">Job Type</label>
+                  <select class="form-select" id="jobType">
+                    <option selected disabled>Select Job Type</option>
+                    <option>Full-time</option>
+                    <option>Internship</option>
+                    <option>Part-time</option>
+                    <option>Contract</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="location" class="form-label">Location</label>
+                  <input type="text" class="form-control" id="location" placeholder="e.g., Redmond, WA; Remote">
+                </div>
+              </div>
+              
+              <div class="row mb-3">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label for="openings" class="form-label">Number of Openings</label>
+                  <input type="number" class="form-control" id="openings" min="1" value="1">
+                </div>
+                <div class="col-md-6">
+                  <label for="deadline" class="form-label">Application Deadline</label>
+                  <input type="date" class="form-control" id="deadline">
+                </div>
+              </div>
+              
+              <div class="mb-3">
+                <label for="jobDescription" class="form-label">Job Description</label>
+                <textarea class="form-control" id="jobDescription" rows="4" placeholder="Describe the job role, responsibilities, and requirements"></textarea>
+              </div>
+              
+              <div class="mb-3">
+                <label for="skillsRequired" class="form-label">Required Skills</label>
+                <input type="text" class="form-control" id="skillsRequired" placeholder="e.g., Java, Python, React, SQL, AWS">
+                <div class="form-text">Separate skills with commas</div>
+              </div>
+              
+              <div class="row mb-3">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label for="minExp" class="form-label">Minimum Experience (years)</label>
+                  <input type="number" class="form-control" id="minExp" min="0" value="0">
+                </div>
+                <div class="col-md-6">
+                  <label for="minCGPA" class="form-label">Minimum CGPA</label>
+                  <input type="number" class="form-control" id="minCGPA" min="0" max="10" step="0.1" value="7.5">
+                </div>
+              </div>
+              
+              <div class="mb-3">
+                <label for="salaryRange" class="form-label">Salary Range</label>
+                <select class="form-select" id="salaryRange">
+                  <option selected disabled>Select Salary Range</option>
+                  <option>5-8 LPA</option>
+                  <option>8-12 LPA</option>
+                  <option>12-15 LPA</option>
+                  <option>15-20 LPA</option>
+                  <option>20-25 LPA</option>
+                  <option>25+ LPA</option>
+                </select>
+              </div>
+              
+              <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-outline-secondary me-2">Save as Draft</button>
+                <button type="submit" class="btn btn-primary">Post Job</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <h5 class="mb-3">CampusHire</h5>
+            <p class="text-muted small">Connecting students with top companies for recruitment opportunities.</p>
+          </div>
+          <div class="col-md-2 mb-3 mb-md-0">
+            <h6 class="mb-3">Quick Links</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+              <li class="mb-2"><a href="companies.html" class="text-decoration-none text-muted">Companies</a></li>
+              <li class="mb-2"><a href="tests.html" class="text-decoration-none text-muted">Test Series</a></li>
+              <li><a href="interviews.html" class="text-decoration-none text-muted">Interviews</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-3 mb-md-0">
+            <h6 class="mb-3">Recruiter Resources</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Talent Sourcing Guide</a></li>
+              <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Interview Templates</a></li>
+              <li><a href="#" class="text-decoration-none text-muted">Campus Recruitment Best Practices</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6 class="mb-3">Contact Us</h6>
+            <p class="text-muted small mb-2"><i class="bi bi-envelope me-2"></i> support@campushire.com</p>
+            <p class="text-muted small mb-2"><i class="bi bi-telephone me-2"></i> +1 (123) 456-7890</p>
+            <div class="social-icons mt-3">
+              <a href="#" class="text-decoration-none text-muted me-3"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="text-decoration-none text-muted me-3"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="text-decoration-none text-muted me-3"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="text-decoration-none text-muted"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr class="mt-4 mb-3 border-secondary">
+        <div class="text-center text-muted">
+          <small>&copy; 2023 CampusHire. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

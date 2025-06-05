@@ -1,0 +1,977 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Portal - Campus Placement System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <i class="bi bi-building me-2"></i>
+          <span>CampusHire</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="companies.html">Companies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tests.html">Test Series</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="interviews.html">Interviews</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <div class="dropdown">
+              <a class="btn btn-outline-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                <i class="bi bi-person-circle me-1"></i>
+                Student
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="student-portal.html">Dashboard</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container py-4">
+      <!-- Student Profile Header -->
+      <div class="card mb-4 border-0 shadow-sm bg-info bg-gradient text-white">
+        <div class="card-body p-4">
+          <div class="row align-items-center">
+            <div class="col-md-2 col-lg-1 text-center text-md-start mb-3 mb-md-0">
+              <div class="profile-picture rounded-circle bg-white text-info d-inline-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                <i class="bi bi-person-fill fs-1"></i>
+              </div>
+            </div>
+            <div class="col-md-7 col-lg-8 text-center text-md-start mb-3 mb-md-0">
+              <h2 class="mb-1">Emily Johnson</h2>
+              <p class="mb-0">Computer Science Engineering | 8.7 CGPA | Batch 2024</p>
+              <div class="student-badges mt-2">
+                <span class="badge bg-light text-dark me-1"><i class="bi bi-award text-warning me-1"></i> Dean's List</span>
+                <span class="badge bg-light text-dark me-1"><i class="bi bi-laptop text-primary me-1"></i> Hackathon Winner</span>
+                <span class="badge bg-light text-dark"><i class="bi bi-journal-check text-success me-1"></i> Certified Cloud Developer</span>
+              </div>
+            </div>
+            <div class="col-md-3 col-lg-3 text-center text-md-end">
+              <button class="btn btn-light me-2">
+                <i class="bi bi-pencil me-1"></i> Edit Profile
+              </button>
+              <div class="dropdown d-inline-block">
+                <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  <i class="bi bi-three-dots-vertical"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-pdf me-2"></i> Download Resume</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="bi bi-graph-up me-2"></i> View Analytics</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i> Settings</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard Row -->
+      <div class="row mb-4">
+        <!-- Left Column -->
+        <div class="col-lg-8 mb-4 mb-lg-0">
+          <!-- Application Status -->
+          <div class="card border-0 shadow-sm mb-4">
+            <div class="card-header bg-white py-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">Application Status</h5>
+                <a href="#" class="btn btn-sm btn-primary">
+                  <i class="bi bi-search me-1"></i> Find Jobs
+                </a>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div class="table-responsive">
+                <table class="table align-middle mb-0">
+                  <thead class="table-light">
+                    <tr>
+                      <th scope="col">Company</th>
+                      <th scope="col">Position</th>
+                      <th scope="col">Applied On</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <div class="company-logo me-2 p-2 bg-light rounded">
+                            <i class="bi bi-microsoft text-primary"></i>
+                          </div>
+                          <span>Microsoft</span>
+                        </div>
+                      </td>
+                      <td>Software Engineer</td>
+                      <td>Oct 10, 2023</td>
+                      <td><span class="badge bg-info">Interview Scheduled</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">View Details</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <div class="company-logo me-2 p-2 bg-light rounded">
+                            <i class="bi bi-google text-danger"></i>
+                          </div>
+                          <span>Google</span>
+                        </div>
+                      </td>
+                      <td>Frontend Developer</td>
+                      <td>Oct 05, 2023</td>
+                      <td><span class="badge bg-warning">Assessment Pending</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">View Details</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <div class="company-logo me-2 p-2 bg-light rounded">
+                            <i class="bi bi-amazon text-warning"></i>
+                          </div>
+                          <span>Amazon</span>
+                        </div>
+                      </td>
+                      <td>Product Manager</td>
+                      <td>Oct 02, 2023</td>
+                      <td><span class="badge bg-success">Shortlisted</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">View Details</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <div class="company-logo me-2 p-2 bg-light rounded">
+                            <i class="bi bi-apple text-dark"></i>
+                          </div>
+                          <span>Apple</span>
+                        </div>
+                      </td>
+                      <td>UI/UX Designer</td>
+                      <td>Sep 28, 2023</td>
+                      <td><span class="badge bg-secondary">Applied</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">View Details</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="card-footer bg-white text-center py-2">
+              <a href="#" class="btn btn-link btn-sm">View All Applications</a>
+            </div>
+          </div>
+
+          <!-- Upcoming Interviews & Tests -->
+          <div class="card border-0 shadow-sm mb-4">
+            <div class="card-header bg-white py-3">
+              <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#interviews" data-bs-toggle="tab">Upcoming Interviews</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#tests" data-bs-toggle="tab">Pending Tests</a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <div class="tab-content">
+                <!-- Interviews Tab -->
+                <div class="tab-pane fade show active" id="interviews">
+                  <div class="list-group list-group-flush">
+                    <div class="list-group-item px-0">
+                      <div class="d-flex align-items-center">
+                        <div class="date-badge me-3 d-flex flex-column align-items-center">
+                          <span class="month bg-primary text-white rounded-top px-2 py-1">Oct</span>
+                          <span class="day fw-bold fs-4 border border-top-0 rounded-bottom px-2">16</span>
+                        </div>
+                        <div class="flex-grow-1">
+                          <div class="d-flex align-items-center mb-1">
+                            <div class="company-logo me-2 p-1 bg-light rounded">
+                              <i class="bi bi-microsoft text-primary"></i>
+                            </div>
+                            <h6 class="mb-0">Microsoft Technical Interview</h6>
+                            <span class="ms-auto badge bg-info">Technical</span>
+                          </div>
+                          <p class="text-muted small mb-1"><i class="bi bi-clock me-1"></i> 9:00 AM - 10:30 AM</p>
+                          <p class="text-muted small mb-0"><i class="bi bi-geo-alt me-1"></i> Tech Building, Room 303</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="list-group-item px-0">
+                      <div class="d-flex align-items-center">
+                        <div class="date-badge me-3 d-flex flex-column align-items-center">
+                          <span class="month bg-primary text-white rounded-top px-2 py-1">Oct</span>
+                          <span class="day fw-bold fs-4 border border-top-0 rounded-bottom px-2">19</span>
+                        </div>
+                        <div class="flex-grow-1">
+                          <div class="d-flex align-items-center mb-1">
+                            <div class="company-logo me-2 p-1 bg-light rounded">
+                              <i class="bi bi-amazon text-warning"></i>
+                            </div>
+                            <h6 class="mb-0">Amazon HR Round</h6>
+                            <span class="ms-auto badge bg-warning text-dark">HR</span>
+                          </div>
+                          <p class="text-muted small mb-1"><i class="bi bi-clock me-1"></i> 2:00 PM - 3:00 PM</p>
+                          <p class="text-muted small mb-0"><i class="bi bi-geo-alt me-1"></i> HR Building, Room 105</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center mt-3">
+                    <a href="#" class="btn btn-sm btn-primary">View All Interviews</a>
+                  </div>
+                </div>
+
+                <!-- Tests Tab -->
+                <div class="tab-pane fade" id="tests">
+                  <div class="list-group list-group-flush">
+                    <div class="list-group-item px-0">
+                      <div class="d-flex align-items-center">
+                        <div class="test-icon me-3 p-2 bg-light rounded">
+                          <i class="bi bi-google text-danger fs-4"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                          <h6 class="mb-0">Google Online Assessment</h6>
+                          <p class="text-muted small mb-1">Frontend Development Role</p>
+                          <div class="d-flex align-items-center">
+                            <span class="text-danger small"><i class="bi bi-alarm me-1"></i> Due in 2 days</span>
+                            <span class="ms-3 text-muted small"><i class="bi bi-clock me-1"></i> 90 minutes</span>
+                          </div>
+                        </div>
+                        <button class="btn btn-sm btn-primary ms-3">Start Test</button>
+                      </div>
+                    </div>
+                    
+                    <div class="list-group-item px-0">
+                      <div class="d-flex align-items-center">
+                        <div class="test-icon me-3 p-2 bg-light rounded">
+                          <i class="bi bi-microsoft text-primary fs-4"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                          <h6 class="mb-0">Microsoft Coding Challenge</h6>
+                          <p class="text-muted small mb-1">Software Engineer Role</p>
+                          <div class="d-flex align-items-center">
+                            <span class="text-warning small"><i class="bi bi-alarm me-1"></i> Due in 5 days</span>
+                            <span class="ms-3 text-muted small"><i class="bi bi-clock me-1"></i> 120 minutes</span>
+                          </div>
+                        </div>
+                        <button class="btn btn-sm btn-primary ms-3">Start Test</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center mt-3">
+                    <a href="#" class="btn btn-sm btn-primary">View All Tests</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recommended Jobs -->
+          <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white py-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">Recommended Jobs</h5>
+                <a href="#" class="btn btn-sm btn-link">View All</a>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div class="list-group list-group-flush">
+                <div class="list-group-item px-3 py-3">
+                  <div class="d-flex align-items-center mb-2">
+                    <div class="company-logo me-3 p-2 bg-light rounded">
+                      <i class="bi bi-meta text-primary fs-4"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-0">Frontend Engineer</h6>
+                      <p class="text-muted small mb-0">Meta | Menlo Park, CA</p>
+                    </div>
+                    <span class="ms-auto badge bg-success">95% Match</span>
+                  </div>
+                  <div class="d-flex align-items-center mb-2 flex-wrap">
+                    <span class="badge bg-info me-1 mb-1">React</span>
+                    <span class="badge bg-info me-1 mb-1">JavaScript</span>
+                    <span class="badge bg-info me-1 mb-1">CSS</span>
+                    <span class="badge bg-info me-1 mb-1">UX Design</span>
+                    <span class="badge bg-info mb-1">GraphQL</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <span class="text-muted small me-3"><i class="bi bi-briefcase me-1"></i> 0-2 years</span>
+                      <span class="text-muted small"><i class="bi bi-currency-dollar me-1"></i> 15-20 LPA</span>
+                    </div>
+                    <button class="btn btn-sm btn-primary">Apply Now</button>
+                  </div>
+                </div>
+                
+                <div class="list-group-item px-3 py-3">
+                  <div class="d-flex align-items-center mb-2">
+                    <div class="company-logo me-3 p-2 bg-light rounded">
+                      <i class="bi bi-linkedin text-info fs-4"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-0">Software Developer</h6>
+                      <p class="text-muted small mb-0">LinkedIn | Sunnyvale, CA</p>
+                    </div>
+                    <span class="ms-auto badge bg-success">90% Match</span>
+                  </div>
+                  <div class="d-flex align-items-center mb-2 flex-wrap">
+                    <span class="badge bg-info me-1 mb-1">Java</span>
+                    <span class="badge bg-info me-1 mb-1">Spring</span>
+                    <span class="badge bg-info me-1 mb-1">JavaScript</span>
+                    <span class="badge bg-info mb-1">REST API</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <span class="text-muted small me-3"><i class="bi bi-briefcase me-1"></i> 1-3 years</span>
+                      <span class="text-muted small"><i class="bi bi-currency-dollar me-1"></i> 15-22 LPA</span>
+                    </div>
+                    <button class="btn btn-sm btn-primary">Apply Now</button>
+                  </div>
+                </div>
+                
+                <div class="list-group-item px-3 py-3">
+                  <div class="d-flex align-items-center mb-2">
+                    <div class="company-logo me-3 p-2 bg-light rounded">
+                      <i class="bi bi-paypal text-info fs-4"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-0">Full Stack Developer</h6>
+                      <p class="text-muted small mb-0">PayPal | San Jose, CA</p>
+                    </div>
+                    <span class="ms-auto badge bg-warning text-dark">85% Match</span>
+                  </div>
+                  <div class="d-flex align-items-center mb-2 flex-wrap">
+                    <span class="badge bg-info me-1 mb-1">Node.js</span>
+                    <span class="badge bg-info me-1 mb-1">React</span>
+                    <span class="badge bg-info me-1 mb-1">MongoDB</span>
+                    <span class="badge bg-info mb-1">AWS</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <span class="text-muted small me-3"><i class="bi bi-briefcase me-1"></i> 2-4 years</span>
+                      <span class="text-muted small"><i class="bi bi-currency-dollar me-1"></i> 18-25 LPA</span>
+                    </div>
+                    <button class="btn btn-sm btn-primary">Apply Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-lg-4">
+          <!-- Profile Completion Card -->
+          <div class="card mb-4 border-0 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title mb-3">Profile Completion</h5>
+              <div class="d-flex align-items-center mb-3">
+                <div class="progress flex-grow-1 me-2" style="height: 8px;">
+                  <div class="progress-bar bg-success" role="progressbar" style="width: 85%"></div>
+                </div>
+                <span class="fw-bold">85%</span>
+              </div>
+              <div class="profile-checklist mb-3">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  <span>Basic Information</span>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  <span>Education Details</span>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  <span>Resume Uploaded</span>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  <span>Skills & Interests</span>
+                </div>
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-circle text-muted me-2"></i>
+                  <span class="text-muted">Work Experience</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <a href="#" class="btn btn-sm btn-outline-primary">Complete Profile</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Test Performance -->
+          <div class="card mb-4 border-0 shadow-sm">
+            <div class="card-header bg-white py-3">
+              <h5 class="card-title mb-0">Test Performance</h5>
+            </div>
+            <div class="card-body">
+              <div class="mb-3 pb-3 border-bottom">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <h6 class="mb-0">Technical</h6>
+                  <span class="badge bg-success">85%</span>
+                </div>
+                <div class="progress" style="height: 8px;">
+                  <div class="progress-bar bg-success" role="progressbar" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="mb-3 pb-3 border-bottom">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <h6 class="mb-0">Aptitude</h6>
+                  <span class="badge bg-info">76%</span>
+                </div>
+                <div class="progress" style="height: 8px;">
+                  <div class="progress-bar bg-info" role="progressbar" style="width: 76%"></div>
+                </div>
+              </div>
+              <div class="mb-3 pb-3 border-bottom">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <h6 class="mb-0">Reasoning</h6>
+                  <span class="badge bg-primary">92%</span>
+                </div>
+                <div class="progress" style="height: 8px;">
+                  <div class="progress-bar bg-primary" role="progressbar" style="width: 92%"></div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <h6 class="mb-0">Verbal</h6>
+                  <span class="badge bg-warning text-dark">68%</span>
+                </div>
+                <div class="progress" style="height: 8px;">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 68%"></div>
+                </div>
+              </div>
+              <div class="text-center mt-3">
+                <a href="#" class="btn btn-sm btn-primary">View Detailed Analytics</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upcoming Events -->
+          <div class="card mb-4 border-0 shadow-sm">
+            <div class="card-header bg-white py-3">
+              <h5 class="card-title mb-0">Upcoming Events</h5>
+            </div>
+            <div class="card-body">
+              <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action px-0 py-3">
+                  <div class="d-flex">
+                    <div class="date-badge me-3 d-flex flex-column align-items-center">
+                      <span class="month bg-primary text-white rounded-top px-2 py-1">Oct</span>
+                      <span class="day fw-bold fs-4 border border-top-0 rounded-bottom px-2">18</span>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Resume Building Workshop</h6>
+                      <p class="text-muted small mb-1"><i class="bi bi-clock me-1"></i> 2:00 PM - 4:00 PM</p>
+                      <p class="text-muted small mb-0"><i class="bi bi-geo-alt me-1"></i> Seminar Hall</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action px-0 py-3">
+                  <div class="d-flex">
+                    <div class="date-badge me-3 d-flex flex-column align-items-center">
+                      <span class="month bg-primary text-white rounded-top px-2 py-1">Oct</span>
+                      <span class="day fw-bold fs-4 border border-top-0 rounded-bottom px-2">22</span>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">InnovateSoft Pre-Placement Talk</h6>
+                      <p class="text-muted small mb-1"><i class="bi bi-clock me-1"></i> 11:30 AM - 1:00 PM</p>
+                      <p class="text-muted small mb-0"><i class="bi bi-geo-alt me-1"></i> Conference Room</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="card-footer bg-white text-center py-2">
+              <a href="#" class="btn btn-sm btn-outline-primary">View Calendar</a>
+            </div>
+          </div>
+
+          <!-- Skills & Badges -->
+          <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white py-3">
+              <h5 class="card-title mb-0">Skills & Certifications</h5>
+            </div>
+            <div class="card-body">
+              <h6 class="mb-2">Technical Skills</h6>
+              <div class="skills-wrapper mb-3 d-flex flex-wrap">
+                <span class="badge bg-primary me-1 mb-1 p-2">Java</span>
+                <span class="badge bg-primary me-1 mb-1 p-2">Python</span>
+                <span class="badge bg-primary me-1 mb-1 p-2">JavaScript</span>
+                <span class="badge bg-primary me-1 mb-1 p-2">React</span>
+                <span class="badge bg-primary me-1 mb-1 p-2">Node.js</span>
+                <span class="badge bg-primary me-1 mb-1 p-2">SQL</span>
+                <span class="badge bg-primary me-1 mb-1 p-2">Git</span>
+                <span class="badge bg-primary me-1 mb-1 p-2">Docker</span>
+              </div>
+              
+              <h6 class="mb-2">Certifications</h6>
+              <div class="certification-list">
+                <div class="certification-item d-flex align-items-center mb-2">
+                  <i class="bi bi-patch-check-fill text-success me-2 fs-5"></i>
+                  <div>
+                    <h6 class="mb-0">AWS Certified Cloud Practitioner</h6>
+                    <p class="small text-muted mb-0">Issued May 2023 • Expires May 2026</p>
+                  </div>
+                </div>
+                <div class="certification-item d-flex align-items-center">
+                  <i class="bi bi-patch-check-fill text-success me-2 fs-5"></i>
+                  <div>
+                    <h6 class="mb-0">Microsoft Certified: Azure Developer Associate</h6>
+                    <p class="small text-muted mb-0">Issued Jan 2023 • Expires Jan 2025</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="text-center mt-3">
+                <button class="btn btn-sm btn-outline-primary">
+                  <i class="bi bi-plus-lg me-1"></i> Add Skills
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Profile Details -->
+      <div class="card border-0 shadow-sm mb-4">
+        <div class="card-header bg-white py-3">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" href="#personal" data-bs-toggle="tab">Personal Details</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education" data-bs-toggle="tab">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience" data-bs-toggle="tab">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects" data-bs-toggle="tab">Projects</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <div class="tab-content">
+            <!-- Personal Details Tab -->
+            <div class="tab-pane fade show active" id="personal">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <h6 class="form-label">Full Name</h6>
+                  <p>Emily Johnson</p>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <h6 class="form-label">Registration/Roll Number</h6>
+                  <p>CS2024005</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <h6 class="form-label">Email Address</h6>
+                  <p>emily.johnson@example.com</p>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <h6 class="form-label">Phone Number</h6>
+                  <p>+1 (555) 123-4567</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <h6 class="form-label">Date of Birth</h6>
+                  <p>January 15, 2002</p>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <h6 class="form-label">Gender</h6>
+                  <p>Female</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <h6 class="form-label">Current Address</h6>
+                  <p>123 Campus Residency, University Drive<br>San Francisco, CA 94102</p>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <h6 class="form-label">Permanent Address</h6>
+                  <p>456 Maple Avenue<br>Portland, OR 97205</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-md-12">
+                  <h6 class="form-label">About Me</h6>
+                  <p>
+                    Final year Computer Science student with a passion for software development and AI. Experienced in full-stack development, with particular interests in cloud computing and machine learning. Looking for opportunities to apply my technical skills in innovative environments that foster growth and learning.
+                  </p>
+                </div>
+              </div>
+              <div class="text-end">
+                <button class="btn btn-primary">
+                  <i class="bi bi-pencil me-1"></i> Edit Personal Information
+                </button>
+              </div>
+            </div>
+            
+            <!-- Education Tab -->
+            <div class="tab-pane fade" id="education">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5>Education Details</h5>
+                <button class="btn btn-sm btn-primary">
+                  <i class="bi bi-plus-lg me-1"></i> Add Education
+                </button>
+              </div>
+              
+              <!-- Bachelor's Degree Card -->
+              <div class="card mb-3 education-card border shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="education-icon bg-primary-subtle p-2 rounded me-3">
+                      <i class="bi bi-mortarboard-fill text-primary fs-4"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0">Bachelor of Technology in Computer Science</h5>
+                      <p class="text-muted mb-0">California Institute of Technology</p>
+                    </div>
+                    <div class="dropdown">
+                      <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-three-dots-vertical"></i>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-pencil me-2"></i> Edit</a></li>
+                        <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i> Delete</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3 mb-2 mb-md-0">
+                      <p class="text-muted small mb-0">Duration:</p>
+                      <p class="mb-0">2020 - 2024 (Expected)</p>
+                    </div>
+                    <div class="col-md-3 mb-2 mb-md-0">
+                      <p class="text-muted small mb-0">CGPA/Percentage:</p>
+                      <p class="mb-0">8.7/10</p>
+                    </div>
+                    <div class="col-md-3 mb-2 mb-md-0">
+                      <p class="text-muted small mb-0">Major:</p>
+                      <p class="mb-0">Computer Science</p>
+                    </div>
+                    <div class="col-md-3">
+                      <p class="text-muted small mb-0">Status:</p>
+                      <p class="mb-0">Current</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- High School Card -->
+              <div class="card education-card border shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="education-icon bg-secondary-subtle p-2 rounded me-3">
+                      <i class="bi bi-building-fill text-secondary fs-4"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0">High School Diploma</h5>
+                      <p class="text-muted mb-0">Lincoln High School</p>
+                    </div>
+                    <div class="dropdown">
+                      <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-three-dots-vertical"></i>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-pencil me-2"></i> Edit</a></li>
+                        <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i> Delete</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3 mb-2 mb-md-0">
+                      <p class="text-muted small mb-0">Duration:</p>
+                      <p class="mb-0">2018 - 2020</p>
+                    </div>
+                    <div class="col-md-3 mb-2 mb-md-0">
+                      <p class="text-muted small mb-0">Percentage:</p>
+                      <p class="mb-0">92%</p>
+                    </div>
+                    <div class="col-md-3 mb-2 mb-md-0">
+                      <p class="text-muted small mb-0">Stream:</p>
+                      <p class="mb-0">Science & Mathematics</p>
+                    </div>
+                    <div class="col-md-3">
+                      <p class="text-muted small mb-0">Status:</p>
+                      <p class="mb-0">Completed</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Experience Tab -->
+            <div class="tab-pane fade" id="experience">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5>Work Experience & Internships</h5>
+                <button class="btn btn-sm btn-primary">
+                  <i class="bi bi-plus-lg me-1"></i> Add Experience
+                </button>
+              </div>
+              
+              <!-- Internship Card 1 -->
+              <div class="card mb-3 experience-card border shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="company-logo me-3 p-2 bg-light rounded">
+                      <i class="bi bi-meta text-primary fs-4"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0">Software Engineering Intern</h5>
+                      <p class="text-muted mb-0">Meta | Summer 2023</p>
+                    </div>
+                    <div class="dropdown">
+                      <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-three-dots-vertical"></i>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-pencil me-2"></i> Edit</a></li>
+                        <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i> Delete</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-md-6 mb-2 mb-md-0">
+                      <p class="text-muted small mb-0">Duration:</p>
+                      <p class="mb-0">May 2023 - August 2023 (3 months)</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p class="text-muted small mb-0">Location:</p>
+                      <p class="mb-0">Menlo Park, CA (Remote)</p>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="text-muted small mb-1">Responsibilities & Achievements:</p>
+                    <ul class="small">
+                      <li>Developed and enhanced features for Facebook's messaging platform using React and GraphQL</li>
+                      <li>Collaborated with cross-functional teams to implement user interface improvements</li>
+                      <li>Participated in code reviews and implemented feedback from senior developers</li>
+                      <li>Created automated tests that improved code coverage by 15%</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Internship Card 2 -->
+              <div class="card experience-card border shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="company-logo me-3 p-2 bg-light rounded">
+                      <i class="bi bi-laptop text-success fs-4"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0">Web Development Intern</h5>
+                      <p class="text-muted mb-0">TechStart Inc. | Summer 2022</p>
+                    </div>
+                    <div class="dropdown">
+                      <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-three-dots-vertical"></i>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-pencil me-2"></i> Edit</a></li>
+                        <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i> Delete</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-md-6 mb-2 mb-md-0">
+                      <p class="text-muted small mb-0">Duration:</p>
+                      <p class="mb-0">May 2022 - July 2022 (3 months)</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p class="text-muted small mb-0">Location:</p>
+                      <p class="mb-0">San Francisco, CA</p>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="text-muted small mb-1">Responsibilities & Achievements:</p>
+                    <ul class="small">
+                      <li>Designed and developed responsive websites for clients using HTML, CSS, and JavaScript</li>
+                      <li>Built a content management system using Node.js and MongoDB</li>
+                      <li>Implemented SEO best practices that improved client site rankings by 30%</li>
+                      <li>Created documentation for onboarding new team members</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Projects Tab -->
+            <div class="tab-pane fade" id="projects">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5>Projects & Portfolio</h5>
+                <button class="btn btn-sm btn-primary">
+                  <i class="bi bi-plus-lg me-1"></i> Add Project
+                </button>
+              </div>
+              
+              <!-- Project Card 1 -->
+              <div class="card mb-3 project-card border shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="project-icon me-3 p-2 bg-primary-subtle rounded">
+                      <i class="bi bi-robot text-primary fs-4"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0">AI-Powered Task Management System</h5>
+                      <p class="text-muted mb-0">Final Year Project</p>
+                    </div>
+                    <div class="dropdown">
+                      <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-three-dots-vertical"></i>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-pencil me-2"></i> Edit</a></li>
+                        <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i> Delete</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <p class="mb-3">
+                    Developed an intelligent task management application that uses machine learning to prioritize tasks, suggest deadlines, and automate routine activities based on user behavior patterns.
+                  </p>
+                  <div class="d-flex mb-3 flex-wrap">
+                    <span class="badge bg-info me-1 mb-1">Python</span>
+                    <span class="badge bg-info me-1 mb-1">TensorFlow</span>
+                    <span class="badge bg-info me-1 mb-1">Flask</span>
+                    <span class="badge bg-info me-1 mb-1">React</span>
+                    <span class="badge bg-info me-1 mb-1">MongoDB</span>
+                  </div>
+                  <div class="d-flex">
+                    <a href="#" class="btn btn-sm btn-outline-primary me-2">
+                      <i class="bi bi-github me-1"></i> View Code
+                    </a>
+                    <a href="#" class="btn btn-sm btn-outline-success">
+                      <i class="bi bi-link-45deg me-1"></i> Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Project Card 2 -->
+              <div class="card project-card border shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="project-icon me-3 p-2 bg-warning-subtle rounded">
+                      <i class="bi bi-phone text-warning fs-4"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0">Campus Connect Mobile App</h5>
+                      <p class="text-muted mb-0">Hackathon Winner</p>
+                    </div>
+                    <div class="dropdown">
+                      <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-three-dots-vertical"></i>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-pencil me-2"></i> Edit</a></li>
+                        <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i> Delete</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <p class="mb-3">
+                    Created a mobile application that helps students navigate campus resources, connect with peers, and access academic support. Won first place at the University Hackathon 2022.
+                  </p>
+                  <div class="d-flex mb-3 flex-wrap">
+                    <span class="badge bg-info me-1 mb-1">React Native</span>
+                    <span class="badge bg-info me-1 mb-1">Firebase</span>
+                    <span class="badge bg-info me-1 mb-1">Node.js</span>
+                    <span class="badge bg-info me-1 mb-1">Google Maps API</span>
+                  </div>
+                  <div class="d-flex">
+                    <a href="#" class="btn btn-sm btn-outline-primary me-2">
+                      <i class="bi bi-github me-1"></i> View Code
+                    </a>
+                    <a href="#" class="btn btn-sm btn-outline-success">
+                      <i class="bi bi-link-45deg me-1"></i> Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <h5 class="mb-3">CampusHire</h5>
+            <p class="text-muted small">Connecting students with top companies for recruitment opportunities.</p>
+          </div>
+          <div class="col-md-2 mb-3 mb-md-0">
+            <h6 class="mb-3">Quick Links</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+              <li class="mb-2"><a href="companies.html" class="text-decoration-none text-muted">Companies</a></li>
+              <li class="mb-2"><a href="tests.html" class="text-decoration-none text-muted">Test Series</a></li>
+              <li><a href="interviews.html" class="text-decoration-none text-muted">Interviews</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-3 mb-md-0">
+            <h6 class="mb-3">Student Resources</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Resume Templates</a></li>
+              <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Interview Tips</a></li>
+              <li><a href="#" class="text-decoration-none text-muted">Placement Preparation</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6 class="mb-3">Contact Us</h6>
+            <p class="text-muted small mb-2"><i class="bi bi-envelope me-2"></i> support@campushire.com</p>
+            <p class="text-muted small mb-2"><i class="bi bi-telephone me-2"></i> +1 (123) 456-7890</p>
+            <div class="social-icons mt-3">
+              <a href="#" class="text-decoration-none text-muted me-3"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="text-decoration-none text-muted me-3"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="text-decoration-none text-muted me-3"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="text-decoration-none text-muted"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr class="mt-4 mb-3 border-secondary">
+        <div class="text-center text-muted">
+          <small>&copy; 2023 CampusHire. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

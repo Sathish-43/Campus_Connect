@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Placement System</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <i class="bi bi-building me-2"></i>
+          <span>CampusHire</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="companies.html">Companies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tests.html">Test Series</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="interviews.html">Interviews</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <div class="dropdown">
+              <a class="btn btn-outline-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                <i class="bi bi-person-circle me-1"></i>
+                Profile
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="student-portal.html">Student Portal</a></li>
+                <li><a class="dropdown-item" href="recruiter-portal.html">Recruiter Portal</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container py-4">
+      <!-- Hero Section -->
+      <section class="hero-section p-4 p-md-5 mb-4 rounded bg-light">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h1 class="display-5 fw-bold">Campus Placement Portal</h1>
+            <p class="lead">Connecting students with top companies for recruitment opportunities.</p>
+            <div class="d-grid gap-2 d-md-flex">
+              <a href="student-portal.html" class="btn btn-primary btn-lg px-4">Student Login</a>
+              <a href="recruiter-portal.html" class="btn btn-outline-secondary btn-lg px-4">Recruiter Login</a>
+            </div>
+          </div>
+          <div class="col-md-6 text-center mt-4 mt-md-0">
+            <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Students in a campus" class="img-fluid rounded shadow-sm" style="max-height: 300px;">
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Cards -->
+      <section class="row mb-4">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <div class="stat-icon bg-primary-subtle p-3 rounded me-3">
+                  <i class="bi bi-building text-primary fs-4"></i>
+                </div>
+                <div>
+                  <h6 class="card-title text-muted mb-0">Companies</h6>
+                  <h2 class="my-1">42</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <div class="stat-icon bg-success-subtle p-3 rounded me-3">
+                  <i class="bi bi-briefcase text-success fs-4"></i>
+                </div>
+                <div>
+                  <h6 class="card-title text-muted mb-0">Jobs Posted</h6>
+                  <h2 class="my-1">126</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <div class="stat-icon bg-warning-subtle p-3 rounded me-3">
+                  <i class="bi bi-calendar-check text-warning fs-4"></i>
+                </div>
+                <div>
+                  <h6 class="card-title text-muted mb-0">Interviews</h6>
+                  <h2 class="my-1">38</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <div class="stat-icon bg-info-subtle p-3 rounded me-3">
+                  <i class="bi bi-person-check text-info fs-4"></i>
+                </div>
+                <div>
+                  <h6 class="card-title text-muted mb-0">Placements</h6>
+                  <h2 class="my-1">87</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Upcoming Events & Announcements -->
+      <div class="row mb-4">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-header bg-white border-0 pb-0">
+              <h5 class="card-title">Upcoming Events</h5>
+            </div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item px-0">
+                  <div class="d-flex">
+                    <div class="date-badge me-3 d-flex flex-column align-items-center">
+                      <span class="month bg-primary text-white rounded-top px-2 py-1">Oct</span>
+                      <span class="day fw-bold fs-4 border border-top-0 rounded-bottom px-2">15</span>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">TechCorp Campus Drive</h6>
+                      <p class="text-muted small mb-0">10:00 AM - Main Auditorium</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item px-0">
+                  <div class="d-flex">
+                    <div class="date-badge me-3 d-flex flex-column align-items-center">
+                      <span class="month bg-primary text-white rounded-top px-2 py-1">Oct</span>
+                      <span class="day fw-bold fs-4 border border-top-0 rounded-bottom px-2">18</span>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Resume Building Workshop</h6>
+                      <p class="text-muted small mb-0">2:00 PM - Seminar Hall</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item px-0">
+                  <div class="d-flex">
+                    <div class="date-badge me-3 d-flex flex-column align-items-center">
+                      <span class="month bg-primary text-white rounded-top px-2 py-1">Oct</span>
+                      <span class="day fw-bold fs-4 border border-top-0 rounded-bottom px-2">22</span>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">InnovateSoft Pre-Placement Talk</h6>
+                      <p class="text-muted small mb-0">11:30 AM - Conference Room</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="card-footer bg-white border-0 text-end">
+              <a href="#" class="btn btn-sm btn-outline-primary">View All Events</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-header bg-white border-0 pb-0">
+              <h5 class="card-title">Announcements</h5>
+            </div>
+            <div class="card-body">
+              <div class="announcement-item mb-3 pb-3 border-bottom">
+                <h6 class="mb-1">Google Summer Internship 2025 - Applications Open</h6>
+                <p class="text-muted small mb-2"><i class="bi bi-clock me-1"></i> Posted 2 days ago</p>
+                <p class="mb-0">Google has opened applications for their Summer 2025 internship program. Eligible students can apply through the placement portal by October 30.</p>
+              </div>
+              <div class="announcement-item mb-3 pb-3 border-bottom">
+                <h6 class="mb-1">Microsoft Assessment Test - Date Change</h6>
+                <p class="text-muted small mb-2"><i class="bi bi-clock me-1"></i> Posted 3 days ago</p>
+                <p class="mb-0">The assessment test for Microsoft has been rescheduled to November 5, 2023. All registered students should note this change.</p>
+              </div>
+              <div class="announcement-item">
+                <h6 class="mb-1">New Companies Added to Placement Schedule</h6>
+                <p class="text-muted small mb-2"><i class="bi bi-clock me-1"></i> Posted 5 days ago</p>
+                <p class="mb-0">Five new companies have been added to this semester's placement schedule. Check the company profiles section for details.</p>
+              </div>
+            </div>
+            <div class="card-footer bg-white border-0 text-end">
+              <a href="#" class="btn btn-sm btn-outline-primary">View All Announcements</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Companies -->
+      <section class="mb-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5 class="mb-0">Recent Companies</h5>
+          <a href="companies.html" class="btn btn-sm btn-link">View All</a>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="company-logo me-3 p-2 bg-light rounded">
+                    <i class="bi bi-microsoft text-primary fs-3"></i>
+                  </div>
+                  <h5 class="card-title mb-0">Microsoft</h5>
+                </div>
+                <p class="card-text mb-2"><span class="badge bg-info">Software Development</span> <span class="badge bg-secondary">12 LPA+</span></p>
+                <p class="card-text small text-muted">Looking for talented software engineers with strong problem-solving skills.</p>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a href="#" class="btn btn-sm btn-outline-primary w-100">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="company-logo me-3 p-2 bg-light rounded">
+                    <i class="bi bi-amazon text-warning fs-3"></i>
+                  </div>
+                  <h5 class="card-title mb-0">Amazon</h5>
+                </div>
+                <p class="card-text mb-2"><span class="badge bg-info">Product Management</span> <span class="badge bg-secondary">15 LPA+</span></p>
+                <p class="card-text small text-muted">Seeking product managers with strong technical background and leadership skills.</p>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a href="#" class="btn btn-sm btn-outline-primary w-100">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="company-logo me-3 p-2 bg-light rounded">
+                    <i class="bi bi-google text-danger fs-3"></i>
+                  </div>
+                  <h5 class="card-title mb-0">Google</h5>
+                </div>
+                <p class="card-text mb-2"><span class="badge bg-info">Data Science</span> <span class="badge bg-secondary">18 LPA+</span></p>
+                <p class="card-text small text-muted">Looking for data scientists with expertise in machine learning and data analysis.</p>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a href="#" class="btn btn-sm btn-outline-primary w-100">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Access -->
+      <section class="mb-4">
+        <h5 class="mb-3">Quick Access</h5>
+        <div class="row">
+          <div class="col-md-3 col-sm-6 mb-3">
+            <a href="companies.html" class="card border-0 shadow-sm text-decoration-none text-dark h-100">
+              <div class="card-body text-center">
+                <div class="quick-access-icon mb-3 mx-auto bg-primary-subtle rounded-circle p-3">
+                  <i class="bi bi-building text-primary fs-4"></i>
+                </div>
+                <h6 class="card-title">Companies</h6>
+                <p class="card-text small text-muted">View company profiles and eligibility criteria</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-3">
+            <a href="tests.html" class="card border-0 shadow-sm text-decoration-none text-dark h-100">
+              <div class="card-body text-center">
+                <div class="quick-access-icon mb-3 mx-auto bg-success-subtle rounded-circle p-3">
+                  <i class="bi bi-journal-check text-success fs-4"></i>
+                </div>
+                <h6 class="card-title">Test Series</h6>
+                <p class="card-text small text-muted">Practice with mock tests and improve your skills</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-3">
+            <a href="interviews.html" class="card border-0 shadow-sm text-decoration-none text-dark h-100">
+              <div class="card-body text-center">
+                <div class="quick-access-icon mb-3 mx-auto bg-warning-subtle rounded-circle p-3">
+                  <i class="bi bi-calendar2-week text-warning fs-4"></i>
+                </div>
+                <h6 class="card-title">Interviews</h6>
+                <p class="card-text small text-muted">Schedule and manage campus interviews</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-3">
+            <a href="student-portal.html" class="card border-0 shadow-sm text-decoration-none text-dark h-100">
+              <div class="card-body text-center">
+                <div class="quick-access-icon mb-3 mx-auto bg-info-subtle rounded-circle p-3">
+                  <i class="bi bi-person-vcard text-info fs-4"></i>
+                </div>
+                <h6 class="card-title">My Profile</h6>
+                <p class="card-text small text-muted">Update your profile and check application status</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <h5 class="mb-3">CampusHire</h5>
+            <p class="text-muted small">Connecting students with top companies for recruitment opportunities.</p>
+          </div>
+          <div class="col-md-2 mb-3 mb-md-0">
+            <h6 class="mb-3">Quick Links</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+              <li class="mb-2"><a href="companies.html" class="text-decoration-none text-muted">Companies</a></li>
+              <li class="mb-2"><a href="tests.html" class="text-decoration-none text-muted">Test Series</a></li>
+              <li><a href="interviews.html" class="text-decoration-none text-muted">Interviews</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-3 mb-md-0">
+            <h6 class="mb-3">Student Resources</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Resume Templates</a></li>
+              <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Interview Tips</a></li>
+              <li><a href="#" class="text-decoration-none text-muted">Placement Preparation</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6 class="mb-3">Contact Us</h6>
+            <p class="text-muted small mb-2"><i class="bi bi-envelope me-2"></i> support@campushire.com</p>
+            <p class="text-muted small mb-2"><i class="bi bi-telephone me-2"></i> +1 (123) 456-7890</p>
+            <div class="social-icons mt-3">
+              <a href="#" class="text-decoration-none text-muted me-3"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="text-decoration-none text-muted me-3"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="text-decoration-none text-muted me-3"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="text-decoration-none text-muted"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr class="mt-4 mb-3 border-secondary">
+        <div class="text-center text-muted">
+          <small>&copy; 2023 CampusHire. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+
+  </body>
+</html>

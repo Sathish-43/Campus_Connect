@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Companies - Campus Placement System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <i class="bi bi-building me-2"></i>
+          <span>CampusHire</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="companies.html">Companies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tests.html">Test Series</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="interviews.html">Interviews</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <div class="dropdown">
+              <a class="btn btn-outline-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                <i class="bi bi-person-circle me-1"></i>
+                Profile
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="student-portal.html">Student Portal</a></li>
+                <li><a class="dropdown-item" href="recruiter-portal.html">Recruiter Portal</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container py-4">
+      <!-- Page Header -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h2 class="mb-1">Companies</h2>
+          <p class="text-muted">Browse and explore companies participating in campus placements</p>
+        </div>
+        <div class="d-flex">
+          <div class="input-group me-2">
+            <input type="text" class="form-control" placeholder="Search companies...">
+            <button class="btn btn-outline-primary" type="button">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+          <button class="btn btn-primary d-flex align-items-center">
+            <i class="bi bi-funnel me-2"></i> Filter
+          </button>
+        </div>
+      </div>
+
+      <!-- Company Filters -->
+      <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title mb-3">Filters</h5>
+          <div class="row g-3">
+            <div class="col-md-3">
+              <label for="industry" class="form-label">Industry</label>
+              <select class="form-select" id="industry">
+                <option selected>All Industries</option>
+                <option>Technology</option>
+                <option>Finance</option>
+                <option>Healthcare</option>
+                <option>Manufacturing</option>
+                <option>Consulting</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label for="jobRole" class="form-label">Job Role</label>
+              <select class="form-select" id="jobRole">
+                <option selected>All Roles</option>
+                <option>Software Development</option>
+                <option>Data Science</option>
+                <option>Product Management</option>
+                <option>Quality Assurance</option>
+                <option>Business Analyst</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label for="minSalary" class="form-label">Min. Package (LPA)</label>
+              <select class="form-select" id="minSalary">
+                <option selected>Any</option>
+                <option>5 LPA</option>
+                <option>10 LPA</option>
+                <option>15 LPA</option>
+                <option>20 LPA</option>
+                <option>25+ LPA</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label for="eligibility" class="form-label">Eligibility</label>
+              <select class="form-select" id="eligibility">
+                <option selected>All CGPA</option>
+                <option>7.0 & Above</option>
+                <option>7.5 & Above</option>
+                <option>8.0 & Above</option>
+                <option>8.5 & Above</option>
+                <option>9.0 & Above</option>
+              </select>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end mt-3">
+            <button class="btn btn-outline-secondary me-2">Reset</button>
+            <button class="btn btn-primary">Apply Filters</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Companies List -->
+      <div class="row mb-4">
+        <!-- Company Card 1 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card company-card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="company-logo me-3 p-3 bg-light rounded">
+                  <i class="bi bi-microsoft text-primary fs-2"></i>
+                </div>
+                <div>
+                  <h5 class="card-title mb-0">Microsoft</h5>
+                  <p class="text-muted small mb-0">Technology | Redmond, WA</p>
+                </div>
+              </div>
+              <div class="company-details mb-3">
+                <span class="badge rounded-pill bg-info mb-2 me-1">Software Development</span>
+                <span class="badge rounded-pill bg-info mb-2 me-1">Cloud Computing</span>
+                <span class="badge rounded-pill bg-info mb-2">Product Management</span>
+                
+                <p class="card-text small mt-2">Microsoft Corporation is an American multinational technology company known for its software products, cloud services, and hardware devices.</p>
+                
+                <div class="company-criteria mt-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Package:</span>
+                    <span class="fw-medium">₹18-25 LPA</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Min. CGPA:</span>
+                    <span class="fw-medium">8.0</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Backlogs:</span>
+                    <span class="fw-medium">None allowed</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span class="text-muted small">Registration Deadline:</span>
+                    <span class="fw-medium text-danger">Oct 20, 2023</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <a href="#" class="btn btn-outline-primary w-100">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Company Card 2 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card company-card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="company-logo me-3 p-3 bg-light rounded">
+                  <i class="bi bi-google text-danger fs-2"></i>
+                </div>
+                <div>
+                  <h5 class="card-title mb-0">Google</h5>
+                  <p class="text-muted small mb-0">Technology | Mountain View, CA</p>
+                </div>
+              </div>
+              <div class="company-details mb-3">
+                <span class="badge rounded-pill bg-info mb-2 me-1">Machine Learning</span>
+                <span class="badge rounded-pill bg-info mb-2 me-1">Data Science</span>
+                <span class="badge rounded-pill bg-info mb-2">Frontend Dev</span>
+                
+                <p class="card-text small mt-2">Google is a multinational technology company specializing in Internet-related services and products, including search engine, cloud computing, and online advertising.</p>
+                
+                <div class="company-criteria mt-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Package:</span>
+                    <span class="fw-medium">₹20-30 LPA</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Min. CGPA:</span>
+                    <span class="fw-medium">8.5</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Backlogs:</span>
+                    <span class="fw-medium">None allowed</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span class="text-muted small">Registration Deadline:</span>
+                    <span class="fw-medium text-danger">Oct 25, 2023</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <a href="#" class="btn btn-outline-primary w-100">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Company Card 3 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card company-card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="company-logo me-3 p-3 bg-light rounded">
+                  <i class="bi bi-amazon text-warning fs-2"></i>
+                </div>
+                <div>
+                  <h5 class="card-title mb-0">Amazon</h5>
+                  <p class="text-muted small mb-0">Technology | Seattle, WA</p>
+                </div>
+              </div>
+              <div class="company-details mb-3">
+                <span class="badge rounded-pill bg-info mb-2 me-1">Software Development</span>
+                <span class="badge rounded-pill bg-info mb-2 me-1">DevOps</span>
+                <span class="badge rounded-pill bg-info mb-2">Product Management</span>
+                
+                <p class="card-text small mt-2">Amazon is an American multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.</p>
+                
+                <div class="company-criteria mt-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Package:</span>
+                    <span class="fw-medium">₹18-28 LPA</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Min. CGPA:</span>
+                    <span class="fw-medium">8.0</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Backlogs:</span>
+                    <span class="fw-medium">Max 1 allowed</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span class="text-muted small">Registration Deadline:</span>
+                    <span class="fw-medium text-success">Nov 05, 2023</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <a href="#" class="btn btn-outline-primary w-100">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Company Card 4 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card company-card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="company-logo me-3 p-3 bg-light rounded">
+                  <i class="bi bi-meta text-primary fs-2"></i>
+                </div>
+                <div>
+                  <h5 class="card-title mb-0">Meta</h5>
+                  <p class="text-muted small mb-0">Technology | Menlo Park, CA</p>
+                </div>
+              </div>
+              <div class="company-details mb-3">
+                <span class="badge rounded-pill bg-info mb-2 me-1">AR/VR Development</span>
+                <span class="badge rounded-pill bg-info mb-2 me-1">Frontend Dev</span>
+                <span class="badge rounded-pill bg-info mb-2">Product Design</span>
+                
+                <p class="card-text small mt-2">Meta Platforms, Inc. is an American multinational technology conglomerate that owns Facebook, Instagram, WhatsApp, and Oculus, among other products and services.</p>
+                
+                <div class="company-criteria mt-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Package:</span>
+                    <span class="fw-medium">₹20-30 LPA</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Min. CGPA:</span>
+                    <span class="fw-medium">8.0</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Backlogs:</span>
+                    <span class="fw-medium">None allowed</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span class="text-muted small">Registration Deadline:</span>
+                    <span class="fw-medium text-danger">Oct 18, 2023</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <a href="#" class="btn btn-outline-primary w-100">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Company Card 5 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card company-card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="company-logo me-3 p-3 bg-light rounded">
+                  <i class="bi bi-apple text-dark fs-2"></i>
+                </div>
+                <div>
+                  <h5 class="card-title mb-0">Apple</h5>
+                  <p class="text-muted small mb-0">Technology | Cupertino, CA</p>
+                </div>
+              </div>
+              <div class="company-details mb-3">
+                <span class="badge rounded-pill bg-info mb-2 me-1">iOS Development</span>
+                <span class="badge rounded-pill bg-info mb-2 me-1">Hardware Design</span>
+                <span class="badge rounded-pill bg-info mb-2">UX Research</span>
+                
+                <p class="card-text small mt-2">Apple Inc. is an American multinational technology company that designs, develops, and sells consumer electronics, computer software, and online services.</p>
+                
+                <div class="company-criteria mt-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Package:</span>
+                    <span class="fw-medium">₹22-32 LPA</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Min. CGPA:</span>
+                    <span class="fw-medium">8.5</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Backlogs:</span>
+                    <span class="fw-medium">None allowed</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span class="text-muted small">Registration Deadline:</span>
+                    <span class="fw-medium text-success">Nov 10, 2023</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <a href="#" class="btn btn-outline-primary w-100">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Company Card 6 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card company-card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="company-logo me-3 p-3 bg-light rounded">
+                  <i class="bi bi-linkedin text-info fs-2"></i>
+                </div>
+                <div>
+                  <h5 class="card-title mb-0">LinkedIn</h5>
+                  <p class="text-muted small mb-0">Technology | Sunnyvale, CA</p>
+                </div>
+              </div>
+              <div class="company-details mb-3">
+                <span class="badge rounded-pill bg-info mb-2 me-1">Web Development</span>
+                <span class="badge rounded-pill bg-info mb-2 me-1">Data Engineering</span>
+                <span class="badge rounded-pill bg-info mb-2">UI/UX Design</span>
+                
+                <p class="card-text small mt-2">LinkedIn is a business and employment-focused social media platform that works through websites and mobile apps.</p>
+                
+                <div class="company-criteria mt-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Package:</span>
+                    <span class="fw-medium">₹16-25 LPA</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Min. CGPA:</span>
+                    <span class="fw-medium">7.5</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">Backlogs:</span>
+                    <span class="fw-medium">Max 1 allowed</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span class="text-muted small">Registration Deadline:</span>
+                    <span class="fw-medium text-success">Nov 15, 2023</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <a href="#" class="btn btn-outline-primary w-100">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <nav aria-label="Companies pagination">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <h5 class="mb-3">CampusHire</h5>
+            <p class="text-muted small">Connecting students with top companies for recruitment opportunities.</p>
+          </div>
+          <div class="col-md-2 mb-3 mb-md-0">
+            <h6 class="mb-3">Quick Links</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+              <li class="mb-2"><a href="companies.html" class="text-decoration-none text-muted">Companies</a></li>
+              <li class="mb-2"><a href="tests.html" class="text-decoration-none text-muted">Test Series</a></li>
+              <li><a href="interviews.html" class="text-decoration-none text-muted">Interviews</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-3 mb-md-0">
+            <h6 class="mb-3">Student Resources</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Resume Templates</a></li>
+              <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Interview Tips</a></li>
+              <li><a href="#" class="text-decoration-none text-muted">Placement Preparation</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6 class="mb-3">Contact Us</h6>
+            <p class="text-muted small mb-2"><i class="bi bi-envelope me-2"></i> support@campushire.com</p>
+            <p class="text-muted small mb-2"><i class="bi bi-telephone me-2"></i> +1 (123) 456-7890</p>
+            <div class="social-icons mt-3">
+              <a href="#" class="text-decoration-none text-muted me-3"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="text-decoration-none text-muted me-3"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="text-decoration-none text-muted me-3"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="text-decoration-none text-muted"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr class="mt-4 mb-3 border-secondary">
+        <div class="text-center text-muted">
+          <small>&copy; 2023 CampusHire. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
